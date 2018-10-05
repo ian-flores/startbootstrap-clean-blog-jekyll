@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  " Network Protocols and Data Science"
+title:  "Network Protocols and Data Science"
 subtitle: "Why do we as Data Scientists care about how computers communicate?"
+author: "Ian Flores Siaca"
 date:   2018-10-05
 background: '/img/posts/networks.png'
 ---
