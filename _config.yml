@@ -6,9 +6,9 @@ baseurl:           ""
 url:               "https://ian-flores.github.io"
 
 # Social Profiles
-twitter_username:  SBootstrap
+#twitter_username:  SBootstrap
 github_username:   ian-flores
-facebook_username: StartBootstrap
+#facebook_username: StartBootstrap
 
 # Build settings
 markdown:          kramdown
