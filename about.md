@@ -14,14 +14,14 @@ Security and Politics.
 
 * Puerto Rico Institute of Statistics - [GitHub Link](https://github.com/ian-flores/TransparenciaFinanciera)
     * Develop containerized web application to visualize financial transparency data from the Government of Puerto Rico.
-      * Technologies used: `shiny`, `rbokeh`, `tidyverse`, `Docker`
+      * Tech used: `shiny`, `rbokeh`, `tidyverse`, `Docker`
 
 * Puerto Rico Violent Death Reporting System - [GitHub Link]()
    * Add components between database and web application that allows for data input of individual incidents.
-      * Technologies used: `CouchDB`, `ReactJS`, `Electron`
+      * Tech used: `CouchDB`, `ReactJS`, `Electron`
    * Prepare automatized reports containing general information about incidents in a given time period.
-      * Technologies used: `RMarkdown`, `ggplot2`, `httr`
+      * Tech used: `RMarkdown`, `ggplot2`, `httr`
    * Add and enforce only encrypted communications from the databse of the project.
-      * Technologies used: `Nginx`, `Docker`, `cert-bot`
+      * Tech used: `Nginx`, `Docker`, `cert-bot`
    * Migrate from a relational database to a non-relational database.
-      * Technologies used: `SQL`, `CouchDB`, `pandas`
+      * Tech used: `SQL`, `CouchDB`, `pandas`
