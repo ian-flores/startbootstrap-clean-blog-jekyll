@@ -1,0 +1,26 @@
+## Work Background
+
+### Government
+* Puerto Rico Institute of Statistics - [GitHub Link](https://github.com/ian-flores/TransparenciaFinanciera)
+    * Develop containerized web application to visualize financial transparency data from the Government of Puerto Rico.
+      * Tech used: `Shiny`, `Rbokeh`, `Tidyverse`, `Docker`
+
+* Puerto Rico Violent Death Reporting System - [GitHub Link]()
+   * Add components between database and web application that allows for data input of individual incidents.
+      * Tech used: `CouchDB`, `ReactJS`, `Electron`
+   * Migrate from a relational database structure to a non-relational database structure.
+      * Tech used: `SQL`, `CouchDB`, `Pandas`
+   * Prepare automatized reports containing general information about incidents in a given time period.
+      * Tech used: `RMarkdown`, `ggplot2`, `httr`
+   * Add and enforce encrypted communication methods part of the stack of the project.
+      * Tech used: `Nginx`, `Docker`, `Let's Encrypt Cert Bot`
+### Non-Profits
+* Caras de las Americas
+   * Develop web application to visualize data from surveys realized in communities in Puerto Rico after Hurricane Maria.
+      * Tech used: `Shiny`, `Plotly`, `Leaflet`
+      
+## Education
+
+* Master of Data Science - 2017
+   * University of British Columbia
+   
