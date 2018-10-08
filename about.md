@@ -18,6 +18,7 @@ I am an applied scientist who is trying to use algorithms, statistics and data t
 ## Work Experience
 
 ### Government
+
 * Puerto Rico Institute of Statistics - [GitHub Link](https://github.com/ian-flores/TransparenciaFinanciera)
     * Develop containerized web application to visualize financial transparency data from the Government of Puerto Rico.
       * Tech used: `Shiny`, `Rbokeh`, `Tidyverse`, `Docker`
@@ -30,9 +31,11 @@ I am an applied scientist who is trying to use algorithms, statistics and data t
       * Tech used: `RMarkdown`, `ggplot2`, `httr`
    * Add and enforce encrypted communication methods part of the stack of the project.
       * Tech used: `Nginx`, `Docker`, `Let's Encrypt Cert Bot`
+      
 ### Non-Profits
+
 * Caras de las Americas
    * Develop web application to visualize data from surveys realized in communities in Puerto Rico after Hurricane Maria.
       * Tech used: `Shiny`, `Plotly`, `Leaflet`
       
-In an effort of total transparency, I have requested the Office of the Comptroller of the Government of Puerto Rico to publish the four (4) contracts I have had with the Government of Puerto Rico. These are available [here](https://consultacontratos.ocpr.gov.pr/), if you type `Ian Flores` under the `Contratista` text box you will see the contracts listed. Under the `Documento` column you can find the PDF of the full contract minus personal information.
+In an effort of total transparency, I have requested the Office of the Comptroller of the Government of Puerto Rico to publish the four (4) contracts I have had with the Government of Puerto Rico in their full version. These are available [here](https://consultacontratos.ocpr.gov.pr/), if you type `Ian Flores` under the `Contratista` text box you will see the contracts listed. Under the `Documento` column you can find the PDF of the full contract minus personal information.
