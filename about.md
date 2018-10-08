@@ -21,7 +21,7 @@ Security and Politics.
       * Tech used: `CouchDB`, `ReactJS`, `Electron`
    * Prepare automatized reports containing general information about incidents in a given time period.
       * Tech used: `RMarkdown`, `ggplot2`, `httr`
-   * Add and enforce only encrypted communications from the databse of the project.
-      * Tech used: `Nginx`, `Docker`, `cert-bot`
-   * Migrate from a relational database to a non-relational database.
+   * Migrate from a relational database structure to a non-relational database structure.
       * Tech used: `SQL`, `CouchDB`, `pandas`
+   * Add and enforce encrypted communication methods part of the stack of the project.
+      * Tech used: `Nginx`, `Docker`, `cert-bot`
