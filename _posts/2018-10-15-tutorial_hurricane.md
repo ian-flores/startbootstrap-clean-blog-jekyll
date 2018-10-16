@@ -32,6 +32,7 @@ background: '/img/posts/puerto_rico_death_choropleth.png'
 			{% include tutorials/hurricane_maria/notebook_03.html %}		
 		</div>
 	        <div class="tab-pane" id="4">
-        		  <h3>Jupyter Notebook #4</h3></div>
+        		{% include tutorials/hurricane_maria/notebook_04.html %}
+		</div>
 	</div>
 </div>
