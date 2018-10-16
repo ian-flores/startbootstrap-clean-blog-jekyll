@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Hurricane Maria Mortality Analysis Tutorial"
-subtitle: "Where did people died after Hurricane Maria in Puerto Rico?"
+title:  "Tutorial - Data Wrangling, Visualization and Inference with Social Data"
+subtitle: "Learning how to use python to answer questions about the effect of Hurricane Maria in Puerto Rico"
 author: "Ian Flores Siaca"
 date:   2018-10-15
 background: '/img/posts/puerto_rico_death_choropleth.png'
