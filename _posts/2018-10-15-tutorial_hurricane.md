@@ -17,7 +17,7 @@ background: '/img/posts/puerto_rico_death_choropleth.png'
 	<li>
 		<a class="nav-link" href="#3" data-toggle="tab">Mapping Mortality Rates</a></li>
 	<li>
-		<a class="nav-link" href="#4" data-toggle="tab">Notebook 04</a></li>
+		<a class="nav-link" href="#4" data-toggle="tab">Estimating Mortality Rates in Puerto Rico</a></li>
 	</ul>
 
 	<div class="tab-content ">
