@@ -1,0 +1,983 @@
+<style>
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*properties of tooltip after "expand"*/
+.bigtooltip {
+  overflow: auto;
+  height: 200px;
+  -webkit-transition-property: height;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-property: height;
+  -moz-transition-duration: 500ms;
+  transition-property: height;
+  transition-duration: 500ms;
+}
+/*properties of tooltip before "expand"*/
+.smalltooltip {
+  -webkit-transition-property: height;
+  -webkit-transition-duration: 500ms;
+  -moz-transition-property: height;
+  -moz-transition-duration: 500ms;
+  transition-property: height;
+  transition-duration: 500ms;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 80px;
+}
+.tooltipbuttons {
+  position: absolute;
+  padding-right: 15px;
+  top: 0px;
+  right: 0px;
+}
+.tooltiptext {
+  /*avoid the button to overlap on some docstring*/
+  padding-right: 30px;
+}
+.ipython_tooltip {
+  max-width: 700px;
+  /*fade-in animation when inserted*/
+  -webkit-animation: fadeOut 400ms;
+  -moz-animation: fadeOut 400ms;
+  animation: fadeOut 400ms;
+  -webkit-animation: fadeIn 400ms;
+  -moz-animation: fadeIn 400ms;
+  animation: fadeIn 400ms;
+  vertical-align: middle;
+  background-color: #f7f7f7;
+  overflow: visible;
+  border: #ababab 1px solid;
+  outline: none;
+  padding: 3px;
+  margin: 0px;
+  padding-left: 7px;
+  font-family: monospace;
+  min-height: 50px;
+  -moz-box-shadow: 0px 6px 10px -1px #adadad;
+  -webkit-box-shadow: 0px 6px 10px -1px #adadad;
+  box-shadow: 0px 6px 10px -1px #adadad;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 1000;
+}
+.ipython_tooltip a {
+  float: right;
+}
+.ipython_tooltip .tooltiptext pre {
+  border: 0;
+  border-radius: 0;
+  font-size: 100%;
+  background-color: #f7f7f7;
+}
+.pretooltiparrow {
+  left: 0px;
+  margin: 0px;
+  top: -16px;
+  width: 40px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+}
+.pretooltiparrow:before {
+  background-color: #f7f7f7;
+  border: 1px #ababab solid;
+  z-index: 11;
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  width: 25px;
+  height: 25px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+ul.typeahead-list i {
+  margin-left: -10px;
+  width: 18px;
+}
+ul.typeahead-list {
+  max-height: 80vh;
+  overflow: auto;
+}
+ul.typeahead-list > li > a {
+  /** Firefox bug **/
+  /* see https://github.com/jupyter/notebook/issues/559 */
+  white-space: normal;
+}
+.cmd-palette .modal-body {
+  padding: 7px;
+}
+.cmd-palette form {
+  background: white;
+}
+.cmd-palette input {
+  outline: none;
+}
+.no-shortcut {
+  display: none;
+}
+.command-shortcut:before {
+  content: "(command)";
+  padding-right: 3px;
+  color: #777777;
+}
+.edit-shortcut:before {
+  content: "(edit)";
+  padding-right: 3px;
+  color: #777777;
+}
+#find-and-replace #replace-preview .match,
+#find-and-replace #replace-preview .insert {
+  background-color: #BBDEFB;
+  border-color: #90CAF9;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0px;
+}
+#find-and-replace #replace-preview .replace .match {
+  background-color: #FFCDD2;
+  border-color: #EF9A9A;
+  border-radius: 0px;
+}
+#find-and-replace #replace-preview .replace .insert {
+  background-color: #C8E6C9;
+  border-color: #A5D6A7;
+  border-radius: 0px;
+}
+#find-and-replace #replace-preview {
+  max-height: 60vh;
+  overflow: auto;
+}
+#find-and-replace #replace-preview pre {
+  padding: 5px 10px;
+}
+.terminal-app {
+  background: #EEE;
+}
+.terminal-app #header {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
+  box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
+}
+.terminal-app .terminal {
+  width: 100%;
+  float: left;
+  font-family: monospace;
+  color: white;
+  background: black;
+  padding: 0.4em;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
+  box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
+}
+.terminal-app .terminal,
+.terminal-app .terminal dummy-screen {
+  line-height: 1em;
+  font-size: 14px;
+}
+.terminal-app .terminal .xterm-rows {
+  padding: 10px;
+}
+.terminal-app .terminal-cursor {
+  color: black;
+  background: white;
+}
+.terminal-app #terminado-container {
+  margin-top: 20px;
+}
+/*# sourceMappingURL=style.min.css.map */
+    </style>
+<style type="text/css">
+    .highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+    </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+.ansi-bold { font-weight: bold; }
+    </style>
+
+
+<style type="text/css">
+/* Overrides of notebook CSS for static HTML export */
+body {
+  overflow: visible;
+  padding: 8px;
+}
+div#notebook {
+  overflow: visible;
+  border-top: none;
+}@media print {
+  div.cell {
+    display: block;
+    page-break-inside: avoid;
+  } 
+  div.output_wrapper { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+  div.output { 
+    display: block;
+    page-break-inside: avoid; 
+  }
+}
+</style>
+
+<body>
+  <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="02---Getting-and-Cleaning-Mortality-Data">02 - Getting and Cleaning Mortality Data<a class="anchor-link" href="#02---Getting-and-Cleaning-Mortality-Data">&#182;</a></h1><h3 id="by-Ian-Flores-Siaca">by Ian Flores Siaca<a class="anchor-link" href="#by-Ian-Flores-Siaca">&#182;</a></h3><h5 id="October-2018">October 2018<a class="anchor-link" href="#October-2018">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Purpose-of-this-Notebook">Purpose of this Notebook<a class="anchor-link" href="#Purpose-of-this-Notebook">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Learning">Learning<a class="anchor-link" href="#Learning">&#182;</a></h4><ul>
+<li>Use of <code>pandas</code> <code>group_by</code> function.</li>
+<li>Filtering data with string content.</li>
+</ul>
+<h4 id="Project">Project<a class="anchor-link" href="#Project">&#182;</a></h4><ul>
+<li>Compute the number of deaths per zone of each municipality.</li>
+<li>Clean the name of the municipalities in the mortality dataset.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Mortality-Data">Mortality Data<a class="anchor-link" href="#Mortality-Data">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="../imgs/usa_today.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hurricane Maria struck Puerto Rico the 20th of September of 2017 at 6:15 a.m. entering through the municipality of Yabucoa as a Category 4 hurricane. According to the governments of Puerto Rico and the U.S. Virgin islands, the cost of the damage is estimated in $102 billion USD1. However, the impact wasn't only economical. Following a lawsuit presented by the Center for Investigative Journalism (CPI, by its spanish initials) and CNN, the Government of Puerto Rico, and more specifically the Demographic Registry, was forced to publish the individual-level data of all the deaths occurred from September 20, 2017 to June 11, 2018. This data is available in the following <a href="https://www.dropbox.com/s/k4wrb1ztwu0fwxh/Base%20de%20Datos%20Mortalidad%20en%20PR%20de%20septiembre%2018%20de%202017%20a%2011%20de%20junio%20de%202018%20entregada%20por%20Gobierno%20de%20PR%20al%20CPI.xls?dl=0">Dropbox Link</a> from the CPI.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Let's-code!">Let's code!<a class="anchor-link" href="#Let's-code!">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Load-the-libraries">Load the libraries<a class="anchor-link" href="#Load-the-libraries">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here we are downloading the data directly from <em>Dropbox</em> and storing it under the <code>data/</code> folder in the <code>mortality.xlsx</code> file.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&quot;wget --output-document=&#39;../data/mortality.xlsx&#39; &#39;https://www.dropbox.com/s/k4wrb1ztwu0fwxh/Base</span><span class="si">%20d</span><span class="s2">e%20Datos%20Mortalidad</span><span class="si">%20e</span><span class="s2">n%20PR</span><span class="si">%20d</span><span class="s2">e</span><span class="si">%20s</span><span class="s2">eptiembre</span><span class="si">%2018%</span><span class="s2">20de</span><span class="si">%202017%</span><span class="s2">20a</span><span class="si">%2011%</span><span class="s2">20de%20junio</span><span class="si">%20d</span><span class="s2">e</span><span class="si">%202018%</span><span class="s2">20entregada%20por</span><span class="si">%20G</span><span class="s2">obierno</span><span class="si">%20d</span><span class="s2">e%20PR%20al%20CPI.xls?dl=0&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;../data/mortality.xlsx&quot;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>DeathNumber</th>
+      <th>Volumen</th>
+      <th>CertificateNumber</th>
+      <th>InscriptionYear</th>
+      <th>RegistryOffice</th>
+      <th>RegistrationDate</th>
+      <th>RegistrationDate_Year</th>
+      <th>RegistrationDate_Month</th>
+      <th>RegistrationDate_Day</th>
+      <th>Name</th>
+      <th>...</th>
+      <th>FuneralDate</th>
+      <th>FuneralDate_Year</th>
+      <th>FuneralDate_Month</th>
+      <th>FuneralDate_Day</th>
+      <th>DispositionName</th>
+      <th>DispositionPlace</th>
+      <th>FuneralFacilityName</th>
+      <th>FuneralFacilityLicenseNumber</th>
+      <th>FuneralFacilityPlace</th>
+      <th>FuneralFacilityDirectorName</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>20099</td>
+      <td>34</td>
+      <td>186</td>
+      <td>2017</td>
+      <td>88 - COAMO</td>
+      <td>2017-09-26</td>
+      <td>2017</td>
+      <td>9</td>
+      <td>26</td>
+      <td>GLORIA</td>
+      <td>...</td>
+      <td>2017-09-22 00:00:00</td>
+      <td>2017.0</td>
+      <td>9.0</td>
+      <td>22.0</td>
+      <td>PORTA COELI CREMATION PLUS</td>
+      <td>BAYAMON, PUERTO RICO</td>
+      <td>FUNERARIA COAMEÑA</td>
+      <td>NaN</td>
+      <td>COAMO, PUERTO RICO</td>
+      <td>DANIEL DIAZ AQUINIO</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>20147</td>
+      <td>34</td>
+      <td>1286</td>
+      <td>2017</td>
+      <td>44 - BAYAMON</td>
+      <td>2017-10-03</td>
+      <td>2017</td>
+      <td>10</td>
+      <td>3</td>
+      <td>MARISOL</td>
+      <td>...</td>
+      <td>2017-09-30 00:00:00</td>
+      <td>2017.0</td>
+      <td>9.0</td>
+      <td>30.0</td>
+      <td>MONTE CALVARIO</td>
+      <td>CAGUAS, PUERTO RICO</td>
+      <td>FUNERARIA ALTERNATIVE</td>
+      <td>NaN</td>
+      <td>BAYAMON, PUERTO RICO</td>
+      <td>HECTOR COLON</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>20160</td>
+      <td>34</td>
+      <td>1085</td>
+      <td>2017</td>
+      <td>1 - NIVEL CENTRAL</td>
+      <td>2017-10-03</td>
+      <td>2017</td>
+      <td>10</td>
+      <td>3</td>
+      <td>RAMON</td>
+      <td>...</td>
+      <td>2017-09-26 00:00:00</td>
+      <td>2017.0</td>
+      <td>9.0</td>
+      <td>26.0</td>
+      <td>MUNICIPAL NUEVO</td>
+      <td>ARECIBO, PUERTO RICO</td>
+      <td>GONZALEZ</td>
+      <td>NaN</td>
+      <td>ARECIBO, PUERTO RICO</td>
+      <td>ROLANDO VELEZ MENDEZ</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>20168</td>
+      <td>34</td>
+      <td>1089</td>
+      <td>2017</td>
+      <td>1 - NIVEL CENTRAL</td>
+      <td>2017-10-03</td>
+      <td>2017</td>
+      <td>10</td>
+      <td>3</td>
+      <td>GLORIA</td>
+      <td>...</td>
+      <td>2017-09-26 00:00:00</td>
+      <td>2017.0</td>
+      <td>9.0</td>
+      <td>26.0</td>
+      <td>NUEVO JERUSALEN</td>
+      <td>UTUADO, PUERTO RICO</td>
+      <td>UTUADO MEMORIAL</td>
+      <td>NaN</td>
+      <td>UTUADO, PUERTO RICO</td>
+      <td>OLGA SAVEDA</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>20169</td>
+      <td>34</td>
+      <td>1297</td>
+      <td>2017</td>
+      <td>44 - BAYAMON</td>
+      <td>2017-10-03</td>
+      <td>2017</td>
+      <td>10</td>
+      <td>3</td>
+      <td>LUIS</td>
+      <td>...</td>
+      <td>2017-09-30 00:00:00</td>
+      <td>2017.0</td>
+      <td>9.0</td>
+      <td>30.0</td>
+      <td>NEW HORIZONS</td>
+      <td>BAYAMON, PUERTO RICO</td>
+      <td>FUNERARIA ASENCIO</td>
+      <td>NaN</td>
+      <td>BAYAMON, PUERTO RICO</td>
+      <td>MELVIN PORTALATIN MONTALVO</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 187 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Filtering-the-data">Filtering the data<a class="anchor-link" href="#Filtering-the-data">&#182;</a></h4><ul>
+<li>We are using the ResidencePlace column as the column for the Municipality</li>
+<li>There is people that died in Puerto Rico, but there residence place is not Puerto Rico, we want to exclude those data points from the analysis. <ul>
+<li><code>data[data.ResidencePlace.str.contains('PUERTO RICO')]</code></li>
+</ul>
+</li>
+<li>We also want to exclude those people we don't know their municipality of residence.<ul>
+<li><code>data[data.ResidenceZone != 'DESCONOCIDO']</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">ResidencePlace</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;PUERTO RICO&#39;</span><span class="p">)]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">ResidencePlace</span> <span class="o">!=</span> <span class="s1">&#39;PUERTO RICO, DESCONOCIDO&#39;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">ResidenceZone</span> <span class="o">!=</span> <span class="s1">&#39;DESCONOCIDO&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Grouping-the-data">Grouping the data<a class="anchor-link" href="#Grouping-the-data">&#182;</a></h4><p>We want to compute the number of deaths in each zone of each municipality:</p>
+<ul>
+<li>Group by <code>ResidencePlace</code> and <code>ResidenceZone</code><ul>
+<li><code>data.groupby(['ResidencePlace', 'ResidenceZone'])</code></li>
+</ul>
+</li>
+<li>Calculate the number of deaths per zone of each municipality<ul>
+<li><code>data.groupby(['ResidencePlace', 'ResidenceZone']).size().reset_index(name='Deaths')</code></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_grp</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;ResidencePlace&#39;</span><span class="p">,</span> <span class="s1">&#39;ResidenceZone&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Deaths&#39;</span><span class="p">)</span>
+<span class="n">df_grp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ResidencePlace</th>
+      <th>ResidenceZone</th>
+      <th>Deaths</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PUERTO RICO, ADJUNTAS</td>
+      <td>RURAL</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>PUERTO RICO, ADJUNTAS</td>
+      <td>URBANO</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>PUERTO RICO, AGUADA</td>
+      <td>RURAL</td>
+      <td>165</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>PUERTO RICO, AGUADA</td>
+      <td>URBANO</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>PUERTO RICO, AGUADILLA</td>
+      <td>RURAL</td>
+      <td>320</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Extract-the-name-of-the-municipalities-from-the-ResidencePlace-column">Extract the name of the municipalities from the <code>ResidencePlace</code> column<a class="anchor-link" href="#Extract-the-name-of-the-municipalities-from-the-ResidencePlace-column">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">municipalities</span> <span class="o">=</span> <span class="n">df_grp</span><span class="o">.</span><span class="n">ResidencePlace</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">municipalities</span><span class="p">)):</span>
+    <span class="n">municipalities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">municipalities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;PUERTO RICO, &quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_grp</span><span class="o">.</span><span class="n">ResidencePlace</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">municipalities</span><span class="p">)</span>
+<span class="n">df_grp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ResidencePlace</th>
+      <th>ResidenceZone</th>
+      <th>Deaths</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ADJUNTAS</td>
+      <td>RURAL</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ADJUNTAS</td>
+      <td>URBANO</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AGUADA</td>
+      <td>RURAL</td>
+      <td>165</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>AGUADA</td>
+      <td>URBANO</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AGUADILLA</td>
+      <td>RURAL</td>
+      <td>320</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Save-our-DataFrame-as-a-CSV-for-future-analysis">Save our DataFrame as a CSV for future analysis<a class="anchor-link" href="#Save-our-DataFrame-as-a-CSV-for-future-analysis">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_grp</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../data/mortality_grouped.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Optional-Questions">Optional Questions<a class="anchor-link" href="#Optional-Questions">&#182;</a></h2><p>1) Did more women died or men?</p>
+<p>2) Which month had the higher mortality?</p>
+<p>3) Which was the average age of death? Did more infants died or older people?</p>
+<p>4) Do you see any patterns in years of education?</p>
+<p>5) Do you notice any patter in the ResidencePlace vs the Death Registry municipality? Why is this?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+
+</div>
+</div>
+</div>
+    </div>
+  </div>
+</body>
