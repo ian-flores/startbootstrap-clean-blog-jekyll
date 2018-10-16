@@ -6,6 +6,11 @@ author: "Ian Flores Siaca"
 date:   2018-10-15
 background: '/img/posts/puerto_rico_death_choropleth.png'
 ---
+
+This tutorial is based on the blog post in this webpage: [https://www.bayesianpolitik.me/2018/10/16/analysis_hurricane.html](https://www.bayesianpolitik.me/2018/10/16/analysis_hurricane.html)
+
+> DISCLAIMER: I'm trying this new thing of the tutorials for the analyses I will be making now on as blog posts. It would be nice/helpful if I could get feedback. All kinds of feedbacks are welcomed. Feel free to use the Contact tab to contact me. 
+
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 <div class="container">
