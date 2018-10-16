@@ -32,7 +32,8 @@ As previously mentioned, the main data source was the individual-level data of a
 ### The Analysis
 
 <hr>
-To answer the first of our questions **Which municipalities in Puerto Rico should prioritize their emergency response plan revision to prevent fatalities in case of future natural disasters?**, I decided that it was better to first standarize the data to be on a comparable scale and then visualize it to see if there were spatial patterns. I did this by calculating the mortality rate for each municipality and overlaying this over a map of Puerto Rico.
+
+To answer the first of our questions **Which municipalities in Puerto Rico should prioritize their emergency response plan revision to prevent fatalities in case of future natural disasters?** , I decided that it was better to first standarize the data to be on a comparable scale and then visualize it to see if there were spatial patterns. I did this by calculating the mortality rate for each municipality and overlaying this over a map of Puerto Rico.
 
 ![](https://raw.githubusercontent.com/ian-flores/Hurricane_Maria_Mortality_Analysis/master/analysis/figs/puerto_rico_death_choropleth.png)
 
