@@ -11,6 +11,23 @@ This tutorial is based on the blog post in this webpage: [https://www.bayesianpo
 
 > DISCLAIMER: I'm trying this new thing of the tutorials for the analyses I will be making now on as blog posts. It would be nice/helpful if I could get feedback. All kinds of feedbacks are welcomed. Feel free to use the Contact tab to contact me. 
 
+Notebook Content: 
+
+* #1) Getting and Cleaning Census Data
+	* How to get data from the census
+	* How to extract and manipulate data coming from a single table
+* #2) Getting and Cleaning Mortality Data
+	* Cleaning data
+	* Dealing with strings in Spanish
+	* Grouping, summarizing, and splitting by different variables
+* #3) Mapping Mortality Rates
+	* Creating maps in Python
+	* Joining data from different sources
+	* Dealing with spatial data in Python
+* #4) Estimating Mortality Rates in Puerto Rico
+	* Bayesian Estimation with `PyMC3`
+	* How to draw conclusions from data
+	
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 <div class="container">
