@@ -7,7 +7,9 @@ date:   2018-10-15
 background: '/img/posts/puerto_rico_death_choropleth.png'
 ---
 
-This tutorial is based on the blog post in this webpage: [https://www.bayesianpolitik.me/2018/10/16/analysis_hurricane.html](https://www.bayesianpolitik.me/2018/10/16/analysis_hurricane.html)
+This tutorial is based on the blog post in this webpage: [https://www.bayesianpolitik.me/2018/10/16/analysis_hurricane.html](https://www.bayesianpolitik.me/2018/10/16/analysis_hurricane.html). I **strongly** recommend you to read the blog post first to get an idea of the data and the context. 
+
+There is a GitHub repository for this tutorial if you want to run it by yourself available here: [https://github.com/ian-flores/mortality_analysis_tutorial](https://github.com/ian-flores/mortality_analysis_tutorial)
 
 > DISCLAIMER: I'm trying this new thing of the tutorials for the analyses I will be making now on as blog posts. It would be nice/helpful if I could get feedback. All kinds of feedbacks are welcomed. Feel free to use the Contact tab to contact me. 
 
