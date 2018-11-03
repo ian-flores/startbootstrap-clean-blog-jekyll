@@ -41,4 +41,4 @@ I scraped all the historical data from the Puerto Rico's Electoral Commission we
 
 > This data is available to download here: [Mayor\_CSV](https://github.com/ian-flores/PR_Elections_Historical_Data/blob/master/data/elecciones_generales/alcalde/alcalde.csv)
 
-![](https://raw.githubusercontent.com/ian-flores/PR_Elections_Historical_Data/master/doc/descritcion_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](https://raw.githubusercontent.com/ian-flores/PR_Elections_Historical_Data/master/doc/description_files/figure-markdown_github/unnamed-chunk-5-1.png)
