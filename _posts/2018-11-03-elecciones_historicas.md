@@ -29,16 +29,16 @@ Descargue todos los datos catalogados como históricos en la página de la Comis
 
 > Los datos estan disponibles para descarga en: [Gobernador\_CSV](https://github.com/ian-flores/PR_Elections_Historical_Data/blob/master/data/elecciones_generales/gobernador/gobernador.csv)
 
-![](../img/descripcion_files/figure-markdown_github/unnamed-chunk-1-1.png)
+![](https://raw.githubusercontent.com/ian-flores/PR_Elections_Historical_Data/master/doc/descripcion_files/figure-markdown_github/unnamed-chunk-1-1.png)
 
 ### Datos disponibles sobre Comisionado Residente
 
 > Los datos estan disponibles para descarga en: [Commisionado\_CSV](https://github.com/ian-flores/PR_Elections_Historical_Data/blob/master/data/elecciones_generales/comisionado_residente/comisionado_residente.csv)
 
-![](../img/descripcion_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](https://raw.githubusercontent.com/ian-flores/PR_Elections_Historical_Data/master/doc/descripcion_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 ### Datos disponibles sobre Alcaldes
 
 > Los datos estan disponibles para descarga en: [Alcaldes\_CSV](https://github.com/ian-flores/PR_Elections_Historical_Data/blob/master/data/elecciones_generales/alcalde/alcalde.csv)
 
-![](../img/descripcion_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](https://raw.githubusercontent.com/ian-flores/PR_Elections_Historical_Data/master/doc/descripcion_files/figure-markdown_github/unnamed-chunk-5-1.png)
