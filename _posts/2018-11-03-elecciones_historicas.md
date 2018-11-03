@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Datos Historicos de las Elecciones en Puerto Rico"
+title:  "Datos Históricos de las Elecciones en Puerto Rico"
 subtitle: "Haciendo accesible datos de elecciones desde 1932-2000"
 author: "Ian Flores Siaca"
 date:   2018-11-03
