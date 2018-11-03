@@ -33,18 +33,18 @@ Descargue todos los datos catalogados como históricos en la página de la Comis
 
 #### Datos a nivel municipal
 
-| Municipio    |   Año| Partido                       |  Votos|
-|:-------------:|:-----:|:------------------------------:|:------:|
-| Adjuntas     |  1948| Partido\_Popular\_Democrático |   4116|
-| Aguada       |  1948| Partido\_Popular\_Democrático |   4004|
-| Aguadilla    |  1948| Partido\_Popular\_Democrático |   5960|
-| Aguas Buenas |  1948| Partido\_Popular\_Democrático |   2362|
-| Aibonito     |  1948| Partido\_Popular\_Democrático |   4059|
-| Añasco       |  1948| Partido\_Popular\_Democrático |   3347|
-| Arecibo      |  1948| Partido\_Popular\_Democrático |  15213|
-| Arroyo       |  1948| Partido\_Popular\_Democrático |   2588|
-| Barceloneta  |  1948| Partido\_Popular\_Democrático |   4743|
-| Barranquitas |  1948| Partido\_Popular\_Democrático |   4117|
+| Municipio      |   Año| Partido                       |  Votos|
+|:---------------|-----:|------------------------------:|------:|
+| Adjuntas       |  1948| Partido\_Popular\_Democrático |   4116|
+| Aguada         |  1948| Partido\_Popular\_Democrático |   4004|
+| Aguadilla      |  1948| Partido\_Popular\_Democrático |   5960|
+| Aguas Buenas   |  1948| Partido\_Popular\_Democrático |   2362|
+| Aibonito       |  1948| Partido\_Popular\_Democrático |   4059|
+| Añasco         |  1948| Partido\_Popular\_Democrático |   3347|
+| Arecibo        |  1948| Partido\_Popular\_Democrático |  15213|
+| Arroyo         |  1948| Partido\_Popular\_Democrático |   2588|
+| Barceloneta    |  1948| Partido\_Popular\_Democrático |   4743|
+| Barranquitas   |  1948| Partido\_Popular\_Democrático |   4117|
 
 ### Datos disponibles sobre Comisionado Residente
 
