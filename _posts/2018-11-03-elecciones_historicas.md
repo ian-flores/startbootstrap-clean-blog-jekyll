@@ -32,7 +32,18 @@ Descargue todos los datos catalogados como históricos en la página de la Comis
 
 #### Datos a nivel municipal
 
-{% include posts/datatables/gobernador.html %}
+| Municipio    |   Año| Partido                       |  Votos|
+|:-------------|-----:|:------------------------------|------:|
+| Adjuntas     |  1948| Partido\_Popular\_Democrático |   4116|
+| Aguada       |  1948| Partido\_Popular\_Democrático |   4004|
+| Aguadilla    |  1948| Partido\_Popular\_Democrático |   5960|
+| Aguas Buenas |  1948| Partido\_Popular\_Democrático |   2362|
+| Aibonito     |  1948| Partido\_Popular\_Democrático |   4059|
+| Añasco       |  1948| Partido\_Popular\_Democrático |   3347|
+| Arecibo      |  1948| Partido\_Popular\_Democrático |  15213|
+| Arroyo       |  1948| Partido\_Popular\_Democrático |   2588|
+| Barceloneta  |  1948| Partido\_Popular\_Democrático |   4743|
+| Barranquitas |  1948| Partido\_Popular\_Democrático |   4117|
 
 ### Datos disponibles sobre Comisionado Residente
 
@@ -42,7 +53,18 @@ Descargue todos los datos catalogados como históricos en la página de la Comis
 
 #### Datos a nivel municipal
 
-{% include posts/datatables/comisionado.html %}
+| Municipio    |   Año| Partido            |  Votos|
+|:-------------|-----:|:-------------------|------:|
+| Adjuntas     |  1932| Unión\_Republicana |   1365|
+| Aguada       |  1932| Unión\_Republicana |    617|
+| Aguadilla    |  1932| Unión\_Republicana |   4050|
+| Aguas Buenas |  1932| Unión\_Republicana |    722|
+| Aibonito     |  1932| Unión\_Republicana |   1554|
+| Añasco       |  1932| Unión\_Republicana |    447|
+| Arecibo      |  1932| Unión\_Republicana |    526|
+| Arroyo       |  1932| Unión\_Republicana |     88|
+| Barceloneta  |  1932| Unión\_Republicana |    311|
+| Barranquitas |  1932| Unión\_Republicana |    333|
 
 ### Datos disponibles sobre Alcaldes
 
@@ -52,4 +74,15 @@ Descargue todos los datos catalogados como históricos en la página de la Comis
 
 #### Datos a nivel municipal
 
-{% include posts/datatables/alcalde.html %}
+| Municipio    |   Año| Partido                     |  Votos|
+|:-------------|-----:|:----------------------------|------:|
+| Adjuntas     |  1976| Partido\_Nuevo\_Progresista |   4496|
+| Aguada       |  1976| Partido\_Nuevo\_Progresista |   6781|
+| Aguadilla    |  1976| Partido\_Nuevo\_Progresista |  12586|
+| Aguas Buenas |  1976| Partido\_Nuevo\_Progresista |   4492|
+| Aibonito     |  1976| Partido\_Nuevo\_Progresista |   2986|
+| Añasco       |  1976| Partido\_Nuevo\_Progresista |   5209|
+| Arecibo      |  1976| Partido\_Nuevo\_Progresista |  21622|
+| Arroyo       |  1976| Partido\_Nuevo\_Progresista |   3472|
+| Barceloneta  |  1976| Partido\_Nuevo\_Progresista |   4841|
+| Barranquitas |  1976| Partido\_Nuevo\_Progresista |   5136|
