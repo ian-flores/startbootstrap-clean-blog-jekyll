@@ -10,7 +10,6 @@ background: '/img/posts/capitol_pr.jpg'
 > Foto de portada es de [The Guardian](https://www.theguardian.com/world/2017/jun/10/puerto-rico-vote-statehood-us-economy).
 
 
-
 Contexto
 --------
 
@@ -30,503 +29,61 @@ Descargue todos los datos catalogados como históricos en la página de la Comis
 
 > Los datos estan disponibles para descarga en: [Gobernador\_CSV](https://github.com/ian-flores/PR_Elections_Historical_Data/blob/master/data/elecciones_generales/gobernador/gobernador.csv)
 
-![](https://raw.githubusercontent.com/ian-flores/PR_Elections_Historical_Data/master/doc/descripcion_files/figure-markdown_github/unnamed-chunk-1-1.png)
+![](descripcion_files/figure-markdown_github/unnamed-chunk-1-1.png)
 
 #### Datos a nivel municipal
 
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-Municipio
-</th>
-<th style="text-align:right;">
-Año
-</th>
-<th style="text-align:left;">
-Partido
-</th>
-<th style="text-align:right;">
-Votos
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-Adjuntas
-</td>
-<td style="text-align:right;">
-1948
-</td>
-<td style="text-align:left;">
-Partido\_Popular\_Democrático
-</td>
-<td style="text-align:right;">
-4116
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aguada
-</td>
-<td style="text-align:right;">
-1948
-</td>
-<td style="text-align:left;">
-Partido\_Popular\_Democrático
-</td>
-<td style="text-align:right;">
-4004
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aguadilla
-</td>
-<td style="text-align:right;">
-1948
-</td>
-<td style="text-align:left;">
-Partido\_Popular\_Democrático
-</td>
-<td style="text-align:right;">
-5960
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aguas Buenas
-</td>
-<td style="text-align:right;">
-1948
-</td>
-<td style="text-align:left;">
-Partido\_Popular\_Democrático
-</td>
-<td style="text-align:right;">
-2362
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aibonito
-</td>
-<td style="text-align:right;">
-1948
-</td>
-<td style="text-align:left;">
-Partido\_Popular\_Democrático
-</td>
-<td style="text-align:right;">
-4059
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Añasco
-</td>
-<td style="text-align:right;">
-1948
-</td>
-<td style="text-align:left;">
-Partido\_Popular\_Democrático
-</td>
-<td style="text-align:right;">
-3347
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Arecibo
-</td>
-<td style="text-align:right;">
-1948
-</td>
-<td style="text-align:left;">
-Partido\_Popular\_Democrático
-</td>
-<td style="text-align:right;">
-15213
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Arroyo
-</td>
-<td style="text-align:right;">
-1948
-</td>
-<td style="text-align:left;">
-Partido\_Popular\_Democrático
-</td>
-<td style="text-align:right;">
-2588
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Barceloneta
-</td>
-<td style="text-align:right;">
-1948
-</td>
-<td style="text-align:left;">
-Partido\_Popular\_Democrático
-</td>
-<td style="text-align:right;">
-4743
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Barranquitas
-</td>
-<td style="text-align:right;">
-1948
-</td>
-<td style="text-align:left;">
-Partido\_Popular\_Democrático
-</td>
-<td style="text-align:right;">
-4117
-</td>
-</tr>
-</tbody>
-</table>
+| Municipio    |   Año| Partido                       |  Votos|
+|:-------------:|:-----:|:------------------------------:|:------:|
+| Adjuntas     |  1948| Partido\_Popular\_Democrático |   4116|
+| Aguada       |  1948| Partido\_Popular\_Democrático |   4004|
+| Aguadilla    |  1948| Partido\_Popular\_Democrático |   5960|
+| Aguas Buenas |  1948| Partido\_Popular\_Democrático |   2362|
+| Aibonito     |  1948| Partido\_Popular\_Democrático |   4059|
+| Añasco       |  1948| Partido\_Popular\_Democrático |   3347|
+| Arecibo      |  1948| Partido\_Popular\_Democrático |  15213|
+| Arroyo       |  1948| Partido\_Popular\_Democrático |   2588|
+| Barceloneta  |  1948| Partido\_Popular\_Democrático |   4743|
+| Barranquitas |  1948| Partido\_Popular\_Democrático |   4117|
+
 ### Datos disponibles sobre Comisionado Residente
 
 > Los datos estan disponibles para descarga en: [Commisionado\_CSV](https://github.com/ian-flores/PR_Elections_Historical_Data/blob/master/data/elecciones_generales/comisionado_residente/comisionado_residente.csv)
 
-![](https://raw.githubusercontent.com/ian-flores/PR_Elections_Historical_Data/master/doc/descripcion_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](descripcion_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 #### Datos a nivel municipal
 
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-Municipio
-</th>
-<th style="text-align:right;">
-Año
-</th>
-<th style="text-align:left;">
-Partido
-</th>
-<th style="text-align:right;">
-Votos
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-Adjuntas
-</td>
-<td style="text-align:right;">
-1932
-</td>
-<td style="text-align:left;">
-Unión\_Republicana
-</td>
-<td style="text-align:right;">
-1365
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aguada
-</td>
-<td style="text-align:right;">
-1932
-</td>
-<td style="text-align:left;">
-Unión\_Republicana
-</td>
-<td style="text-align:right;">
-617
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aguadilla
-</td>
-<td style="text-align:right;">
-1932
-</td>
-<td style="text-align:left;">
-Unión\_Republicana
-</td>
-<td style="text-align:right;">
-4050
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aguas Buenas
-</td>
-<td style="text-align:right;">
-1932
-</td>
-<td style="text-align:left;">
-Unión\_Republicana
-</td>
-<td style="text-align:right;">
-722
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aibonito
-</td>
-<td style="text-align:right;">
-1932
-</td>
-<td style="text-align:left;">
-Unión\_Republicana
-</td>
-<td style="text-align:right;">
-1554
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Añasco
-</td>
-<td style="text-align:right;">
-1932
-</td>
-<td style="text-align:left;">
-Unión\_Republicana
-</td>
-<td style="text-align:right;">
-447
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Arecibo
-</td>
-<td style="text-align:right;">
-1932
-</td>
-<td style="text-align:left;">
-Unión\_Republicana
-</td>
-<td style="text-align:right;">
-526
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Arroyo
-</td>
-<td style="text-align:right;">
-1932
-</td>
-<td style="text-align:left;">
-Unión\_Republicana
-</td>
-<td style="text-align:right;">
-88
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Barceloneta
-</td>
-<td style="text-align:right;">
-1932
-</td>
-<td style="text-align:left;">
-Unión\_Republicana
-</td>
-<td style="text-align:right;">
-311
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Barranquitas
-</td>
-<td style="text-align:right;">
-1932
-</td>
-<td style="text-align:left;">
-Unión\_Republicana
-</td>
-<td style="text-align:right;">
-333
-</td>
-</tr>
-</tbody>
-</table>
+| Municipio    |   Año| Partido            |  Votos|
+|:-------------|-----:|:-------------------|------:|
+| Adjuntas     |  1932| Unión\_Republicana |   1365|
+| Aguada       |  1932| Unión\_Republicana |    617|
+| Aguadilla    |  1932| Unión\_Republicana |   4050|
+| Aguas Buenas |  1932| Unión\_Republicana |    722|
+| Aibonito     |  1932| Unión\_Republicana |   1554|
+| Añasco       |  1932| Unión\_Republicana |    447|
+| Arecibo      |  1932| Unión\_Republicana |    526|
+| Arroyo       |  1932| Unión\_Republicana |     88|
+| Barceloneta  |  1932| Unión\_Republicana |    311|
+| Barranquitas |  1932| Unión\_Republicana |    333|
+
 ### Datos disponibles sobre Alcaldes
 
 > Los datos estan disponibles para descarga en: [Alcaldes\_CSV](https://github.com/ian-flores/PR_Elections_Historical_Data/blob/master/data/elecciones_generales/alcalde/alcalde.csv)
 
-![](https://raw.githubusercontent.com/ian-flores/PR_Elections_Historical_Data/master/doc/descripcion_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](descripcion_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 #### Datos a nivel municipal
 
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-Municipio
-</th>
-<th style="text-align:right;">
-Año
-</th>
-<th style="text-align:left;">
-Partido
-</th>
-<th style="text-align:right;">
-Votos
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-Adjuntas
-</td>
-<td style="text-align:right;">
-1976
-</td>
-<td style="text-align:left;">
-Partido\_Nuevo\_Progresista
-</td>
-<td style="text-align:right;">
-4496
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aguada
-</td>
-<td style="text-align:right;">
-1976
-</td>
-<td style="text-align:left;">
-Partido\_Nuevo\_Progresista
-</td>
-<td style="text-align:right;">
-6781
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aguadilla
-</td>
-<td style="text-align:right;">
-1976
-</td>
-<td style="text-align:left;">
-Partido\_Nuevo\_Progresista
-</td>
-<td style="text-align:right;">
-12586
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aguas Buenas
-</td>
-<td style="text-align:right;">
-1976
-</td>
-<td style="text-align:left;">
-Partido\_Nuevo\_Progresista
-</td>
-<td style="text-align:right;">
-4492
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Aibonito
-</td>
-<td style="text-align:right;">
-1976
-</td>
-<td style="text-align:left;">
-Partido\_Nuevo\_Progresista
-</td>
-<td style="text-align:right;">
-2986
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Añasco
-</td>
-<td style="text-align:right;">
-1976
-</td>
-<td style="text-align:left;">
-Partido\_Nuevo\_Progresista
-</td>
-<td style="text-align:right;">
-5209
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Arecibo
-</td>
-<td style="text-align:right;">
-1976
-</td>
-<td style="text-align:left;">
-Partido\_Nuevo\_Progresista
-</td>
-<td style="text-align:right;">
-21622
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Arroyo
-</td>
-<td style="text-align:right;">
-1976
-</td>
-<td style="text-align:left;">
-Partido\_Nuevo\_Progresista
-</td>
-<td style="text-align:right;">
-3472
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Barceloneta
-</td>
-<td style="text-align:right;">
-1976
-</td>
-<td style="text-align:left;">
-Partido\_Nuevo\_Progresista
-</td>
-<td style="text-align:right;">
-4841
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Barranquitas
-</td>
-<td style="text-align:right;">
-1976
-</td>
-<td style="text-align:left;">
-Partido\_Nuevo\_Progresista
-</td>
-<td style="text-align:right;">
-5136
-</td>
-</tr>
-</tbody>
-</table>
+| Municipio    |   Año| Partido                     |  Votos|
+|:-------------|-----:|:----------------------------|------:|
+| Adjuntas     |  1976| Partido\_Nuevo\_Progresista |   4496|
+| Aguada       |  1976| Partido\_Nuevo\_Progresista |   6781|
+| Aguadilla    |  1976| Partido\_Nuevo\_Progresista |  12586|
+| Aguas Buenas |  1976| Partido\_Nuevo\_Progresista |   4492|
+| Aibonito     |  1976| Partido\_Nuevo\_Progresista |   2986|
+| Añasco       |  1976| Partido\_Nuevo\_Progresista |   5209|
+| Arecibo      |  1976| Partido\_Nuevo\_Progresista |  21622|
+| Arroyo       |  1976| Partido\_Nuevo\_Progresista |   3472|
+| Barceloneta  |  1976| Partido\_Nuevo\_Progresista |   4841|
+| Barranquitas |  1976| Partido\_Nuevo\_Progresista |   5136|
