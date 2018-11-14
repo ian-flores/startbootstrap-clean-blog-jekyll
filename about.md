@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Me
-description: Competition is always injurious to the species, and you have plenty of resources to avoid it! - Pyotr Kropotkin
+description: Equality in mutual relations with the solidarity arising from it, this is the most powerful weapon of the animal world in the struggle for existence. - Pyotr Kropotkin
 background: '/img/nasa_pr.jpg'
 ---
 
@@ -21,21 +21,15 @@ I am an applied scientist who is trying to use algorithms, statistics and data t
 
 * Puerto Rico Institute of Statistics - [GitHub Link](https://github.com/ian-flores/TransparenciaFinanciera)
     * Develop containerized web application to visualize financial transparency data from the Government of Puerto Rico.
-      * Tech used: `Shiny`, `Rbokeh`, `Tidyverse`, `Docker`
 * Puerto Rico Violent Death Reporting System - [GitHub Link]()
    * Add components between database and web application that allows for data input of individual incidents.
-      * Tech used: `CouchDB`, `ReactJS`, `Electron`
    * Migrate from a relational database structure to a non-relational database structure.
-      * Tech used: `SQL`, `CouchDB`, `Pandas`
    * Prepare automatized reports containing general information about incidents in a given time period.
-      * Tech used: `RMarkdown`, `ggplot2`, `httr`
    * Add and enforce encrypted communication methods part of the stack of the project.
-      * Tech used: `Nginx`, `Docker`, `Let's Encrypt Cert Bot`
       
 ### Non-Profits
 
 * Caras de las Americas
    * Develop web application to visualize data from surveys realized in communities in Puerto Rico after Hurricane Maria.
-      * Tech used: `Shiny`, `Plotly`, `Leaflet`
       
 In an effort of total transparency, I have requested the Office of the Comptroller of the Government of Puerto Rico to publish the four (4) contracts I have had with the Government of Puerto Rico in their full version. These are available [here](https://consultacontratos.ocpr.gov.pr/), if you type `Ian Flores` under the `Contratista` text box you will see the contracts listed. Under the `Documento` column you can find the PDF of the full contract minus personal information.
