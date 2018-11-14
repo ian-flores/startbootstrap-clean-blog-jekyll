@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Me
-description: I do Data Science applied to Social Data.
+description: Competition is always injurious to the species, and you have plenty of resources to avoid it! - Pyotr Kropotkin
 background: '/img/nasa_pr.jpg'
 ---
 
