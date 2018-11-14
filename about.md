@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About Me
-description: Equality in mutual relations with the solidarity arising from it, this is the most powerful weapon of the animal world in the struggle for existence. - Pyotr Kropotkin
+description: People have only as much liberty as they have the intelligence to want and the courage to take. - Emma Goldman
 background: '/img/nasa_pr.jpg'
 ---
 
