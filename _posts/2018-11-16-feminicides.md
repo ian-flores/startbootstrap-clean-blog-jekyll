@@ -8,4 +8,4 @@ background: '/img/posts/capitol_pr.jpg'
 htmlwidgets: true
 ---
 
-<iframe src="http://www.bayesianpolitik.me/feminicidesLATAM/test.html" seamless></iframe>
+<iframe src="http://www.bayesianpolitik.me/feminicidesLATAM/test.html"></iframe>
