@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Feminicides in Latin America and the Caribbean"
-subtitle: "Looking at feminicides with data from the United Nations"
+subtitle: "Analyzing feminicides with data from the United Nations"
 author: "Ian Flores Siaca"
 date:   2018-11-16
 background: '/img/posts/latin_america.jpg'
