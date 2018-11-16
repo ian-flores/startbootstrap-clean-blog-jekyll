@@ -9,6 +9,7 @@ background: '/img/posts/latin_america.jpg'
 
 > * The full blog post can be found here: [https://www.bayesianpolitik.me/feminicidesLATAM/feminicides_en](https://www.bayesianpolitik.me/feminicidesLATAM/feminicides_en)
 > * Due to software constrains the plots and tables that accompany the post are only included in the link above. Please read the blog post over there. 
+> * The image in the top is from Eduardo Galeano's book 'Las Venas Abiertas de América Latina'.
 
 ## Context
 
