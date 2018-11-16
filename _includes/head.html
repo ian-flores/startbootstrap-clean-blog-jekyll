@@ -25,9 +25,28 @@
   {% include analytics.html %}
   {% endif %}
 
-
-  <!-- htmlwidgets dependencies --> 
-{% assign dep_file = page.url | split: '/' | last | prepend : 'htmlwidgets/' %}
-{% include {{dep_file}} %}
-<!-- end htmlwidgets files -->
+<script src="{{ "/htmlwidgets_deps/htmlwidgets-1.3/htmlwidgets.js" | relative_url }}"></script>
+<script src="{{ "/htmlwidgets_deps/jquery-1.12.4/jquery.min.js" | relative_url }}"></script>
+<link href="{{ "/htmlwidgets_deps/datatables-css-0.0.0/datatables-crosstalk.css" | relative_url }}" rel="stylesheet" />
+<script src="{{ "/htmlwidgets_deps/datatables-binding-0.4/datatables.js" | relative_url }}"></script>
+<link href="{{ "/htmlwidgets_deps/dt-core-1.10.16/css/jquery.dataTables.min.css" | relative_url }}" rel="stylesheet" />
+<link href="{{ "/htmlwidgets_deps/dt-core-1.10.16/css/jquery.dataTables.extra.css" | relative_url }}" rel="stylesheet" />
+<script src="{{ "/htmlwidgets_deps/dt-core-1.10.16/js/jquery.dataTables.min.js" | relative_url }}"></script>
+<script src="{{ "/htmlwidgets_deps/pdfmake-1.10.16/pdfmake.min.js" | relative_url }}"></script>
+<script src="{{ "/htmlwidgets_deps/pdfmake-1.10.16/vfs_fonts.js" | relative_url }}"></script>
+<link href="{{ "/htmlwidgets_deps/dt-ext-buttons-1.10.16/css/buttons.dataTables.min.css" | relative_url }}" rel="stylesheet" />
+<script src="{{ "/htmlwidgets_deps/dt-ext-buttons-1.10.16/js/dataTables.buttons.min.js" | relative_url }}"></script>
+<script src="{{ "/htmlwidgets_deps/dt-ext-buttons-1.10.16/js/buttons.flash.min.js" | relative_url }}"></script>
+<script src="{{ "/htmlwidgets_deps/dt-ext-buttons-1.10.16/js/buttons.html5.min.js" | relative_url }}"></script>
+<script src="{{ "/htmlwidgets_deps/dt-ext-buttons-1.10.16/js/buttons.colVis.min.js" | relative_url }}"></script>
+<script src="{{ "/htmlwidgets_deps/dt-ext-buttons-1.10.16/js/buttons.print.min.js" | relative_url }}"></script>
+<link href="{{ "/htmlwidgets_deps/dt-ext-responsive-1.10.16/css/responsive.dataTables.min.css" | relative_url }}" rel="stylesheet" />
+<script src="{{ "/htmlwidgets_deps/dt-ext-responsive-1.10.16/js/dataTables.responsive.min.js" | relative_url }}"></script>
+<link href="{{ "/htmlwidgets_deps/nouislider-7.0.10/jquery.nouislider.min.css" | relative_url }}" rel="stylesheet" />
+<script src="{{ "/htmlwidgets_deps/nouislider-7.0.10/jquery.nouislider.min.js" | relative_url }}"></script>
+<link href="{{ "/htmlwidgets_deps/selectize-0.12.0/selectize.bootstrap3.css" | relative_url }}" rel="stylesheet" />
+<script src="{{ "/htmlwidgets_deps/selectize-0.12.0/selectize.min.js" | relative_url }}"></script>
+<link href="{{ "/htmlwidgets_deps/crosstalk-1.0.0/css/crosstalk.css" | relative_url }}" rel="stylesheet" />
+<script src="{{ "/htmlwidgets_deps/crosstalk-1.0.0/js/crosstalk.min.js" | relative_url }}"></script>
+  
 </head>
