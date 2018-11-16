@@ -5,6 +5,7 @@ subtitle: "Making"
 author: "Ian Flores Siaca"
 date:   2018-11-16
 background: '/img/posts/capitol_pr.jpg'
+htmlwidgets: true
 ---
 
 <!DOCTYPE html>
