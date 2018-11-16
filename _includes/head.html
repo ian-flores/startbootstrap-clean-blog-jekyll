@@ -25,9 +25,4 @@
   {% include analytics.html %}
   {% endif %}
 
-
-  <!-- htmlwidgets dependencies --> 
-{% assign dep_file = page.url | split: '/' | last | prepend : 'htmlwidgets/' %}
-{% include {{dep_file}} %}
-<!-- end htmlwidgets files -->
 </head>
